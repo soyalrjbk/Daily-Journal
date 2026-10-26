@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+    
+        <div class="col-sm-6">
+
+        <!-- Output -->
+
+          <h3>Your Journal:</h3>
+          <ul class="messages">
+            <% for (let i = 0; i < journal.length; i++) { %>
+            <li class="journal" data-id="<%= journal[i]._id %>">
+                <span><%= journal[i].title %></span>
+                <span><%= journal[i].message %></span>
+                <span><%= journal[i].date %></span>
+                <span><%= journal[i].mood %></span>
+                <span><button class="delete">Delete</button></span>
+                <span><input type="text" class="edit" placeholder="Edit your entry"><button class="save">Save</button></span>
+            </li>
+          <% } %>
+          </ul>
+
+          <!-- User Interface -->
+          <h2>Add your daily journal</h2>
+        <% if (user.local.email) { %>
+          <form action="/journal" method="POST">
+            <input type="text" placeholder="title" name="title">
+            <textarea type="text" name="message" placeholder="What's in your mind . . ."></textarea>
+            <input type="date" name="date">
+            <select name="mood">
+                <option>😎 Cool</option>
+                <option>😑 Fine</option>
+                <option>😫 Down</option>
+            </select>
+            <button type="submit">Submit</button>
+          </form>
+        <% } %>
+         </div>
+    </div>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
