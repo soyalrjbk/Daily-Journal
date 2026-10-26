@@ -10,7 +10,7 @@
 <div class="container">
 
     <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <h1><span class="fa fa-book"></span> My Daily Journal</h1>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
     </div>
 
@@ -35,7 +35,7 @@
           </ul>
 
           <!-- User Interface -->
-          <h2>Add your daily journal</h2>
+          <h2>Add your daily journal:</h2>
         <% if (user.local.email) { %>
           <form action="/journal" method="POST">
             <input type="text" placeholder="title" name="title">

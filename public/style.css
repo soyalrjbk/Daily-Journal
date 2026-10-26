@@ -1,8 +1,65 @@
-body{
-  padding-top:80px;
-  word-wrap:break-word;
-  background: url('img/trent.jpg') center / cover no-repeat fixed;
+body {
+  background: #f6f1e9;       
+  font-family: Georgia, serif;
+  color: #292828;
 }
-img{
-  height: 200px;
+
+.col-sm-6 {
+  float: none;
+  margin: 0 auto;
+}
+
+h3, h2{
+  text-align: center;
+}
+
+.messages {
+  list-style: none;
+  padding: 0;
+}
+
+.journal {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.journal span {
+  display: block;                  
+  margin-bottom: 6px;
+}
+
+.edit {
+  width: 70%;
+  padding: 6px 10px;
+  border: 1px solid #a39898;
+  border-radius: 6px;
+}
+
+.save, .delete {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.save{ 
+  background: #5a8f69; 
+}  
+
+.delete { 
+  background: #c0504d; 
+}    
+
+form input, form textarea, form select {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #b5a5a5;
+  border-radius: 6px;
 }
